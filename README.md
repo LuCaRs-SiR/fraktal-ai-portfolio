@@ -35,3 +35,19 @@ Fraktal AI to modułowa platforma łącząca interfejs webowy (frontend React) z
     ```
     Następnie postępuj zgodnie z instrukcjami w sekcji “Instalacja” poniżej.
 4. W razie pytań, napisz do autora: LuCaRs-SiR.
+
+---
+
+## Opis techniczny wizualizacji
+
+**Projekt:** Zintegrowana platforma AI: Fraktal + Agent-Service
+**Technologie:** React, Node.js, Python, Docker, WebSocket, Blockchain, AI offline models
+
+**Opis:**
+Schemat przedstawia architekturę systemu składającego się z dwóch głównych modułów:
+
+- **Fraktal Frontend (React + Docker + Nginx):** interfejs użytkownika, dokumentacja, ewaluacja.
+- **Agent-Service Backend (Python):** logika biznesowa, API, integracja z blockchainem, modele AI offline.
+
+**Komponenty pomocnicze:**
+- Skrypty, konfiguracje, testy, dokumentacja, docker-compose, panel administracyjny.
