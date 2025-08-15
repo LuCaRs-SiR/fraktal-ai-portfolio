@@ -1,0 +1,82 @@
+Mapa przepływu danych – Fraktal + Agent-Service + Fractal Engine
+                   ┌─────────────────────────────────────────┐
+                   │                UŻYTKOWNIK                │
+                   │  (przeglądarka / aplikacja desktopowa)   │
+                   └─────────────────────────────────────────┘
+                                      │
+                                      ▼
+                          ┌───────────────────────┐
+                          │    FRAKTAL-APP        │
+                          │  (frontend React/Vite)│
+                          ├───────────────────────┤
+                          │ - ChatPanel.jsx       │
+                          │ - GraphicEditor.jsx   │
+                          │ - EvalDashboard.jsx   │
+                          │ - API.js (REST/WS)    │
+                          └───────────────────────┘
+                                      │
+                                      ▼
+                     🟥 MIEJSCE ŁĄCZENIA (API ENDPOINTY)
+                                      │
+                                      ▼
+           ┌──────────────────────────────────────────────┐
+           │               AGENT-SERVICE (backend)         │
+           │  FastAPI + Python + SQLAlchemy + Offline AI   │
+           ├──────────────────────────────────────────────┤
+           │ - Autoryzacja / logowanie                     │
+           │ - Obsługa modeli Whisper, Vosk, TTS           │
+           │ - Monitorowanie + Human-in-the-loop           │
+           │ - Zarządzanie bazą danych                     │
+           │ - Pluginy i integracje                        │
+           └──────────────────────────────────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────┐
+                    │ FRACTAL-ENGINE (🟦 NOWY MODUŁ)   │
+                    │ - generators/                   │
+                    │     pattern_gen.py              │
+                    │     adaptive_growth.py           │
+                    │ - visualizers/                   │
+                    │     fractal_renderer.js          │
+                    │     fractal_dashboard.jsx        │
+                    │ - integrators/                   │
+                    │     ai_learning_link.py          │
+                    │     agent_connector.py           │
+                    └─────────────────────────────────┘
+                                      │
+                                      ▼
+              ┌─────────────────────────────────────────────┐
+              │           MAGAZYN DANYCH / STORAGE           │
+              │  PostgreSQL / MinIO / lokalne dyski SSD/NVMe │
+              └──────────���──────────────────────────────────┘
+                                      │
+                                      ▼
+              ┌─────────────────────────────────────────────┐
+              │          INFRASTRUKTURA SERWERA              │
+              │  - Docker + docker-compose                   │
+              │  - Nginx reverse proxy                       │
+              │  - Możliwość wdrożenia na VPS/Dedykowanym     │
+              │  - Docelowo: Twój własny serwer + GPU         │
+              └─────────────────────────────────────────────┘
+                                      │
+                                      ▼
+         ┌─────────────────────────────────────────────────────────┐
+         │ OPCJONALNE MODUŁY:                                       │
+         │ - Panele fotowoltaiczne → zasilanie koparki/serwera      │
+         │ - Koparka GPU (np. do miningu / AI inference)            │
+         │ - Usługi wynajmu mocy obliczeniowej                      │
+         └─────────────────────────────────────────────────────────┘
+
+🔍 Co tu widać
+
+Frontend (fraktal-app/) zbiera dane i komunikuje się z backendem.
+
+Agent-Service jest mózgiem API i integruje wszystkie modele oraz logikę aplikacji.
+
+Fractal-Engine to Twój nowy moduł do generowania, wizualizacji i adaptacji struktur fraktalnych.
+
+Magazyn danych przechowuje historię, konfiguracje i wyniki.
+
+Serwer to docelowe miejsce uruchomienia — na początek może być VPS, potem własna maszyna z GPU.
+
+Opcjonalne moduły pozwalają rozszerzyć funkcje o mining, wynajem mocy, czy zasilanie z paneli PV.
